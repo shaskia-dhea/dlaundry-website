@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Galeri - D'Laundry</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -54,7 +53,6 @@
         .navbar-default .navbar-toggle:focus {
             background-color: rgba(255, 255, 255, 0.2) !important;
         }
-
         .jumbotron-galeri {
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/background-tentang.jpeg') no-repeat center center;
             background-size: cover !important; 
@@ -65,7 +63,7 @@
             width: 100%;
         }
         .jumbotron-galeri h1 {
-            font-size: 50px;
+            font-size: clamp(32px, 4.5vw, 50px);
             font-weight: 800;
             color: #ffffff !important;
             letter-spacing: 3px;
@@ -101,7 +99,10 @@
         }
         @media (max-width: 768px) {
             .jumbotron-galeri { padding: 120px 0; } 
-            .jumbotron-galeri h1 { font-size: 32px; }
+            .jumbotron-galeri h1 { 
+                font-size: 36px !important; 
+                font-weight: 800 !important;
+            }
             .section-galeri { padding: 40px 0; }
             .foto-galeri { height: 140px; }
             .kartu-galeri { margin-bottom: 15px; padding: 6px; border-radius: 10px; }
@@ -122,14 +123,13 @@
                     <img src="images/logo.png" alt="Logo" class="navbar-logo"> D'LAUNDRY
                 </a>
             </div>
-
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">Beranda</a></li>
-                    <li><a href="tentang.html">Tentang Kami </a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
                     <li><a href="layanan.html">Layanan</a></li>
                     <li class="active"><a href="galeri.html">Galeri</a></li>
-                    <li><a href="kontak.html">Kontak </a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
                 </ul>
             </div>
         </div>
@@ -144,79 +144,66 @@
     <div class="section-galeri">
         <div class="container">
             <div class="row">
-                
                 <div class="col-md-4 col-sm-6 col-xs-6">
                     <div class="kartu-galeri">
                         <img src="images/galeri1.jpg" alt="Galeri Foto 1" class="foto-galeri">
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-6 col-xs-6">
                     <div class="kartu-galeri">
                         <img src="images/galeri2.jpeg" alt="Galeri Foto 2" class="foto-galeri">
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-6 col-xs-6">
                     <div class="kartu-galeri">
                         <img src="images/galeri3.jpg" alt="Galeri Foto 3" class="foto-galeri">
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-6 col-xs-6">
                     <div class="kartu-galeri">
                         <img src="images/galeri4.jpeg" alt="Galeri Foto 4" class="foto-galeri">
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-6 col-xs-6">
                     <div class="kartu-galeri">
                         <img src="images/galeri5.jpg" alt="Galeri Foto 5" class="foto-galeri">
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-6 col-xs-6">
                     <div class="kartu-galeri">
                         <img src="images/galeri6.jpeg" alt="Galeri Foto 6" class="foto-galeri">
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-6 col-xs-6">
                     <div class="kartu-galeri">
                         <img src="images/galeri7.jpeg" alt="Galeri Foto 7" class="foto-galeri">
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-6 col-xs-6">
                     <div class="kartu-galeri">
                         <img src="images/galeri8.jpeg" alt="Galeri Foto 8" class="foto-galeri">
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-6 col-xs-6">
                     <div class="kartu-galeri">
                         <img src="images/galeri9.jpeg" alt="Galeri Foto 9" class="foto-galeri">
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-6 col-xs-6">
                     <div class="kartu-galeri">
                         <img src="images/galeri10.jpeg" alt="Galeri Foto 10" class="foto-galeri">
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-6 col-xs-6">
                     <div class="kartu-galeri">
                         <img src="images/galeri11.jpeg" alt="Galeri Foto 11" class="foto-galeri">
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-6 col-xs-6">
                     <div class="kartu-galeri">
                         <img src="images/galeri12.jpeg" alt="Galeri Foto 12" class="foto-galeri">
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -250,7 +237,7 @@
                     </p>
                     <div style="position: relative; width: 100%; height: 160px; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.010644239345!2d98.64364710918264!3d3.5850301503063906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312e32322cf2e5%3A0xca6a6096812ec878!2sJl.%20Sei%20Batang%20Hari%20No.96%2C%20Babura%20Sunggal%2C%20Kec.%20Medan%20Sunggal%2C%20Kota%20Medan%2C%20Sumatera%20Utara%2020121!5e0!3m2!1sid!2sid!4v1783255406427!5m2!1sid!2sid"  
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.010644239345!2d98.64364710918264!3d3.5850301503063906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312e32322cf2e5%3A0xca6a6096812ec878!2sJl.%20Sei%20Batang%20Hari%20No.96%2C%20Babura%20Sunggal%2C%20Kec.%20Medan%20Sunggal%2C%20Kota%20Medan%2C%20Sumatera%20Utara%2020121!5e0!3m2!1sid!2sid!4v1783255406427!5m2!1sid!2sid"   
                             width="100%" 
                             height="100%" 
                             style="border:0; position: absolute; top: 0; left: 0;" 
@@ -269,6 +256,7 @@
             </div>
         </div>
     </footer>
+    
     <script src="bootstrap/js/jQuery.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>

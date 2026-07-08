@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Perancangan Website D'Laundry</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             background-color: #ffffff;
+            font-size: 16px;
         }
         .navbar-default {
             background-color: #0284c7; 
@@ -53,7 +53,6 @@
         .navbar-default .navbar-toggle:focus {
             background-color: rgba(255, 255, 255, 0.2) !important;
         }
-        
         .jumbotron-laundry {
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/background-laundry.jpeg') no-repeat center center;
             background-size: cover; 
@@ -90,7 +89,6 @@
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
             padding: 0 15px;
         }
-        
         .section-beranda-tentang {
             padding: 50px 0px;
             background-color: #f4f9fd;
@@ -100,13 +98,13 @@
             font-size: 44px;
             font-weight: 800;
             margin-top: 0px;
+            margin-bottom: 20px;
         }
         .img-tentang-beranda {
             width: 100%;
             height: auto;
             border-radius: 4px; 
         }
-
         .section-layanan {
             background-color: #ffffff; 
             padding: 30px 0px; 
@@ -132,6 +130,9 @@
             margin-bottom: 20px;
             box-shadow: 0 6px 15px rgba(2, 132, 199, 0.15);
         }
+        .kartu-layanan h4 {
+            font-size: 18px;
+        }
         .icon-lingkaran {
             background-color: rgba(255, 255, 255, 0.25);
             width: 55px;
@@ -140,11 +141,6 @@
             line-height: 55px;
             margin: 0 auto 15px auto;
             font-size: 22px;
-        }
-        .section-layanan {
-            background-color: #ffffff; 
-            padding: 20px 0;
-            text-align: center;
         }
         .kartu-harga {
             background: linear-gradient(135deg, #0284c7 0%, #b3e5fc 100%);
@@ -199,6 +195,7 @@
         }
         .modal-title {
             font-weight: bold;
+            font-size: 18px;
         }
         .modal-body {
             padding: 25px;
@@ -261,41 +258,57 @@
             border-radius: 10px;
             display: block;
         }
+        .fitur-mini-box {
+            background: #ffffff;
+            padding: 12px 8px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            margin-bottom: 15px;
+        }
         @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
             .jumbotron-laundry {
                 padding: 40px 0px 45px 0px !important; 
                 margin-top: 50px;
                 text-align: center; 
             }
             .jumbotron-laundry h1 {
-                font-size: 32px !important;
+                font-size: 8vw !important;
+                font-weight: 800 !important;
                 margin-top: 0px !important;
-                margin-bottom: 5px;
+                margin-bottom: 8px;
                 text-align: center; 
             }
             .jumbotron-laundry h2 {
-                font-size: 14px !important;
-                margin-bottom: 10px;
-            }
-            .jumbotron-laundry p {
-                font-size: 11px !important; 
-                line-height: 1.4;
-                padding: 0 20px;
+                font-size: 4.5vw !important;
+                font-weight: 700 !important;
                 margin-bottom: 15px;
             }
-            .jumbotron-laundry div {
-                margin-top: 0px !important;
+            .jumbotron-laundry p {
+                font-size: 13px !important; 
+                line-height: 1.5;
+                padding: 0 15px;
+                margin-bottom: 15px;
             }
             .jumbotron-laundry .btn {
-                padding: 6px 20px !important;
+                padding: 8px 22px !important;
                 font-size: 13px;
             }
             .beranda-tentang-judul {
-                font-size: 32px;
+                font-size: 30px;
+                font-weight: 800 !important;
                 text-align: center;
+                margin-bottom: 15px;
             }
             .section-beranda-tentang h4 {
+                font-weight: 700 !important;
                 text-align: center;
+            }
+            .section-beranda-tentang p {
+                font-size: 14px !important;
             }
             .img-tentang-beranda {
                 margin-bottom: 25px;
@@ -303,11 +316,48 @@
             .section-beranda-tentang .row {
                 display: block !important;
             }
+            .section-layanan h2, .section-galeri h2 {
+                font-size: 26px !important;
+                font-weight: bold !important;
+            }
+            .kartu-layanan h4 {
+                font-size: 15px !important;
+            }
+            .kartu-harga h3 {
+                font-size: 22px !important;
+            }
+            .kartu-harga .harga-text {
+                font-size: 14px !important;
+                padding: 5px 15px;
+            }
+            .well h3 {
+                font-size: 18px !important;
+                text-align: center;
+            }
+            .well h4 {
+                font-size: 15px !important;
+                text-align: center;
+            }
+            .modal-title {
+                font-size: 16px !important;
+            }
+            .baris-layanan {
+                font-size: 14px !important;
+                padding: 10px 15px;
+            }
+            footer h3 {
+                font-size: 20px !important;
+            }
+            footer h4 {
+                font-size: 16px !important;
+            }
+            footer p, footer a {
+                font-size: 13px !important;
+            }
         }
     </style>
 </head>
 <body>
-
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -321,7 +371,6 @@
                     <img src="images/logo.png" alt="Logo" class="navbar-logo"> D'LAUNDRY
                 </a>
             </div>
-
             <div class="collapse navbar-collapse" id="menu-laundry">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="index.html">Beranda</a></li>
@@ -386,13 +435,37 @@
                     <img src="images/foto-laundry.jpeg" alt="Outlet D'Laundry" class="img-tentang-beranda">
                 </div>
                 <div class="col-md-6">
-                    <h4 style="color: #0284c7; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Tentang Kami</h4>
+                    <h4 style="color: #0284c7; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px;">Tentang Kami</h4>
                     <h2 class="beranda-tentang-judul">D'Laundry</h2>
-                    <p style="color: #4b5563; line-height: 1.8; text-align: justify; font-size: 16px;">
-                        D'Laundry hadir untuk memenuhi kebutuhan laundry yang tidak sekedar bersih, namun memberikan layanan yang lebih kepada para konsumen dari sisi kualitas, kecepatan, and harga yang bersaing. Dengan peralatan yang canggih, tenaga yang profesional, kami siap menyelesaikan laundry pakaian Anda hanya dalam waktu singkat demi kenyamanan aktivitas harian Anda.
+                    
+                    <p style="color: #4b5563; line-height: 1.8; text-align: justify; font-size: 15px; margin-bottom: 25px;">
+                        <span style="font-weight: bold; color: #024182;">D'Laundry</span> hadir untuk memenuhi kebutuhan laundry yang tidak sekedar bersih, namun memberikan layanan yang lebih kepada para konsumen. Dengan peralatan yang canggih serta tenaga yang profesional, kami siap menyelesaikan laundry pakaian Anda hanya dalam waktu singkat demi kenyamanan aktivitas harian Anda.
                     </p>
-                    <br>
-                    <a href="tentang.html" class="btn btn-primary" style="padding: 10px 30px; border-radius: 20px; font-weight: 600;  margin-bottom: 50px;">Selengkapnya</a>
+                    
+                    <div class="row">
+                        <div class="col-xs-4 text-center">
+                            <div class="fitur-mini-box">
+                                <span class="glyphicon glyphicon-star" style="font-size: 20px; color: #0284c7; display: block; margin-bottom: 5px;"></span>
+                                <span style="font-weight: bold; color: #1e3a8a; font-size: 11px; text-transform: uppercase;">Kualitas</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 text-center">
+                            <div class="fitur-mini-box">
+                                <span class="glyphicon glyphicon-flash" style="font-size: 20px; color: #0284c7; display: block; margin-bottom: 5px;"></span>
+                                <span style="font-weight: bold; color: #1e3a8a; font-size: 11px; text-transform: uppercase;">Kecepatan</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 text-center">
+                            <div class="fitur-mini-box">
+                                <span class="glyphicon glyphicon-tags" style="font-size: 20px; color: #0284c7; display: block; margin-bottom: 5px;"></span>
+                                <span style="font-weight: bold; color: #1e3a8a; font-size: 11px; text-transform: uppercase;">Harga OK</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 15px;" class="text-left">
+                        <a href="tentang.html" class="btn btn-primary" style="padding: 10px 30px; border-radius: 20px; font-weight: 600; margin-bottom: 30px;">Selengkapnya</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -411,7 +484,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-6">
                     <div class="kartu-harga">
                         <h3>Laundry Kiloan</h3>
@@ -421,7 +493,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-12">
                     <div class="kartu-harga">
                         <h3>Bedding Care</h3>
@@ -439,7 +510,6 @@
            </div>
         </div>
     </div>
-
 
     <div class="modal fade" id="modalSatuan" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -516,7 +586,7 @@
                     <marquee style="color: #0284c7; font-weight: bold;">Yuk, mampir ke outlet kami dan nikmati sensasi laundry kilat dengan hasil bersih higienis serta bergaransi!</marquee>
                 </div>
                 <div class="col-md-3 text-center" style="margin-top: 15px;">
-                    <a href="kontak.html" class="btn btn-primary btn-lg btn-block" style="background-color: #0284c7; color: #ffffff; font-weight: bold; border: none;">Hubungi Kami</a>
+                    <a href="https://wa.me/6283839420964" target="_blank" class="btn btn-primary btn-lg btn-block" style="background-color: #0284c7; color: #ffffff; font-weight: bold; border: none;">Hubungi Kami</a>
                 </div>
             </div>
         </div>
@@ -593,12 +663,12 @@
             <hr style="border-top: 1px solid #5b9bd5;">
             <div class="row">
                 <div class="col-md-12 text-center" style="font-size: 12px;">
-                    <p>&copy; 2026 D'Laundry. All Rights Reserved.</p>
+                    <p>© 2026 D'Laundry. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
-
+    
     <script src="bootstrap/js/jQuery.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>

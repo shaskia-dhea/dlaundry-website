@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tentang Kami - D'Laundry</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -54,7 +53,6 @@
         .navbar-default .navbar-toggle:focus {
             background-color: rgba(255, 255, 255, 0.2) !important;
         }
-
         .jumbotron-tentang {
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/background-tentang.jpeg") no-repeat center center;
             background-size: cover !important; 
@@ -146,21 +144,6 @@
             line-height: 1.6;
             margin: 0;
         }
-        @media (max-width: 768px) {
-            .jumbotron-tentang { padding: 120px 0; } 
-            .jumbotron-tentang h1 { font-size: 32px; }
-            .nama-brand { font-size: 28px; }
-            .kotak-persegi-gradasi { padding: 25px; }
-            .icon-biru-lingkaran {
-                width: 50px;
-                height: 50px;
-                line-height: 50px;
-                font-size: 20px;
-                margin-right: 15px;
-            }
-            .fitur-teks h3 { font-size: 18px; }
-            .row-flex { display: block !important; }
-        }
         .section-mengapa {
             background-color: #ffffff;
             padding: 10px 0 60px 0;
@@ -169,7 +152,7 @@
             font-size: 38px;
             font-weight: 700;
             color: #1e3a8a;
-            margin-top: 30;
+            margin-top: 30px;
             margin-bottom: 15px;
             text-align: center;
         }
@@ -206,10 +189,68 @@
             text-align: justify;
             margin: 0;
         }
+        @media (max-width: 768px) {
+            .jumbotron-tentang { 
+                padding: 120px 0 !important; 
+            } 
+            .jumbotron-tentang h1 { 
+                font-size: 28px !important; 
+                font-weight: 800 !important;
+                letter-spacing: 1px !important;
+            }
+            .nama-brand { 
+                font-size: 26px !important; 
+                font-weight: 800 !important;
+                margin-bottom: 15px !important;
+            }
+            .deskripsi-tentang {
+                font-size: 14px !important;
+                line-height: 1.6 !important;
+            }
+            .judul-mengapa {
+                font-size: 26px !important;
+                font-weight: 700 !important;
+                margin-top: 15px !important;
+            }
+            .sub-mengapa {
+                font-size: 14px !important;
+                margin-bottom: 25px !important;
+            }
+            .kotak-persegi-gradasi { 
+                padding: 20px !important; 
+                margin-bottom: 20px !important;
+            }
+            .icon-biru-lingkaran {
+                width: 50px !important;
+                height: 50px !important;
+                line-height: 50px !important;
+                font-size: 20px !important;
+                margin-right: 15px !important;
+            }
+            .fitur-teks h3 { 
+                font-size: 18px !important; 
+                font-weight: 700 !important; 
+            }
+            .fitur-teks p {
+                font-size: 14px !important;
+            }
+            .kartu-mengapa {
+                padding: 20px !important;
+                margin-bottom: 15px !important;
+            }
+            .kartu-mengapa h4 {
+                font-size: 18px !important;
+            }
+            .kartu-mengapa p {
+                font-size: 14px !important;
+            }
+            .row-flex { 
+                display: block !important; 
+            }
+        }
     </style>
 </head>
 <body>
-
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -223,7 +264,6 @@
                     <img src="images/logo.png" alt="Logo" class="navbar-logo"> D'LAUNDRY
                 </a>
             </div>
-
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">Beranda</a></li>
@@ -250,14 +290,12 @@
                         <div class="sub-judul">Tentang kami</div>
                         <h2 class="nama-brand">D'Laundry</h2>
                         <p class="deskripsi-tentang">
-                            D'Laundry hadir untuk memenuhi kebutuhan laundry yang tidak sekedar bersih, namun memberikan layanan yang lebih kepada para konsumen dari sisi kualitas, kecepatan, dan harga yang bersaing. Dengan peralatan yang canggih, tenaga yang profesional, kami siap menyelesaikan laundry pakaian Anda hanya 8 jam. Nikmati layanan cucian yang bersih maksimal, rapi, dan bergaransi, siap menemani aktivitas padat Anda sehari-hari.
+                            D'Laundry hadir untuk memenuhi kebutuhan laundry yang tidak sekedar bersih, namun memberikan layanan yang lebih kepada para konsumen dari sisi kualitas, kecepatan, dan harga yang bersaing. Dengan peralatan yang canggih, tenaga yang profesional, kami siap menyelesaikan laundry pakaian Anda hanya 8 jam. Nikmati layanan cucian yang bersih maksimal, rapi, and bergaransi, siap menemani aktivitas padat Anda sehari-hari.
                         </p>
                     </div>
                     <img src="images/foto-laundry.jpeg" alt="Foto Toko D'Laundry" class="foto-tentang">
                 </div>
-
                 <div class="col-md-6 col-sm-12" style="padding-top: 15px;">
-                    
                     <div class="fitur-item">
                         <div class="icon-biru-lingkaran">
                             <span class="glyphicon glyphicon-tags"></span>
@@ -267,7 +305,6 @@
                             <p>Kami menggunakan mesin cuci and pengering berteknologi terbaik serta ramah lingkungan. Setiap pakaian Anda ditangani dengan detergen premium dan metode khusus untuk memastikan hasil yang jauh lebih bersih, wangi, higienis, dan aman bagi serat kain.</p>
                         </div>
                     </div>
-
                     <div class="fitur-item">
                         <div class="icon-biru-lingkaran">
                             <span class="glyphicon glyphicon-heart"></span>
@@ -277,7 +314,6 @@
                             <p>Kepuasan Anda adalah prioritas utama kami. D'Laundry selalu menjaga konsistensi kualitas di setiap cucian, didukung dengan layanan bergaransi untuk memberikan rasa aman dan kenyamanan penuh bagi setiap pelanggan setia kami.</p>
                         </div>
                     </div>
-                    
                     <div class="fitur-item">
                         <div class="icon-biru-lingkaran">
                             <span class="glyphicon glyphicon-hourglass"></span>
@@ -287,7 +323,6 @@
                             <p>Kami memahami betapa berharganya waktu Anda. Dengan manajemen operasional yang efisien and tim yang sigap, kami berkomitmen menyelesaikan cucian Anda tepat waktu sesuai paket pilihan Anda tanpa penundaan.</p>
                         </div>
                     </div>
-
                     <div class="fitur-item">
                         <div class="icon-biru-lingkaran">
                             <span class="glyphicon glyphicon-time"></span>
@@ -336,7 +371,7 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="kartu-mengapa">
                         <h4>Pencucian Higienis & Terpisah</h4>
-                        <p>Kami sangat menjaga kebersihan dan privasi pakaian Anda. Di D'Laundry, setiap nota pakaian pelanggan dicuci menggunakan mesin yang terpisah secara personal, sehingga dijamin tidak akan pernah tercampur atau tertukar dengan milik orang lain.</p>
+                        <p>Kami sangat menjaga kebersihan and privasi pakaian Anda. Di D'Laundry, setiap nota pakaian pelanggan dicuci menggunakan mesin yang terpisah secara personal, sehingga dijamin tidak akan pernah tercampur atau tertukar dengan milik orang lain.</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -398,12 +433,12 @@
             <hr style="border-top: 1px solid #5b9bd5;">
             <div class="row">
                 <div class="col-md-12 text-center" style="font-size: 12px;">
-                    <p>&copy; 2026 D'Laundry. All Rights Reserved.</p>
+                    <p>© 2026 D'Laundry. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
-
+    
     <script src="bootstrap/js/jQuery.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Layanan - D'Laundry</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -54,7 +53,6 @@
         .navbar-default .navbar-toggle:focus {
             background-color: rgba(255, 255, 255, 0.2) !important;
         }
-        
         .jumbotron-layanan-utama {
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/background-laundry.jpeg') no-repeat center center;
             background-size: cover !important; 
@@ -65,7 +63,7 @@
             width: 100%;
         }
         .jumbotron-layanan-utama h1 {
-            font-size: 50px;
+            font-size: clamp(32px, 4.5vw, 50px);
             font-weight: 800;
             color: #ffffff !important;
             letter-spacing: 3px;
@@ -80,11 +78,10 @@
         }
         .teks-pengantar-standar {
             color: #0284c7;
-            font-size: 16px;
-            font-weight: 500;
-            max-width: 800px;
+            font-size: 1.2vw;
             margin: 0 auto 40px auto; 
             line-height: 1.6;
+            max-width: 800px;
         }
         .kartu-harga {
             background: linear-gradient(135deg, #0284c7 0%, #b3e5fc 100%);
@@ -99,14 +96,14 @@
             transform: translateY(-8px);
         }
         .kartu-harga h3 {
-            font-size: 26px;
+            font-size: 1.8vw;
             font-weight: 700;
             margin-top: 0;
             margin-bottom: 15px;
             color: #ffffff;
         }
         .kartu-harga .harga-text {
-            font-size: 16px;
+            font-size: 1.2vw;
             font-weight: 600;
             margin-bottom: 35px;
             color: #024182;
@@ -160,12 +157,17 @@
             color: #ffffff !important;
             opacity: 0.8;
         }
-
+        @media (max-width: 992px) {
+            .teks-pengantar-standar { font-size: 16px; }
+            .kartu-harga h3 { font-size: 24px; }
+            .kartu-harga .harga-text { font-size: 16px; }
+        }
         @media (max-width: 768px) {
            .jumbotron-layanan-utama { padding: 120px 0; } 
-            .jumbotron-layanan-utama h1 { font-size: 32px; }
+            .jumbotron-layanan-utama h1 { font-size: 36px !important; font-weight: 800 !important; }
             .kartu-harga { padding: 30px 15px; }
-            .kartu-harga h3 { font-size: 22px; }
+            .kartu-harga h3 { font-size: 22px !important; font-weight: 700 !important; }
+            .kartu-harga .harga-text { font-size: 15px !important; }
             .modal-body { max-height: 320px; } 
         }
     </style>
@@ -184,14 +186,13 @@
                     <img src="images/logo.png" alt="Logo" class="navbar-logo"> D'LAUNDRY
                 </a>
             </div>
-
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">Beranda</a></li>
                     <li><a href="tentang.html">Tentang Kami</a></li>
                     <li class="active"><a href="layanan.html">Layanan</a></li>
                     <li><a href="galeri.html">Galeri</a></li>
-                    <li><a href="kontak.html">Kontak</a></li>
+                    <li><a href="kontak.html">Contak</a></li>
                 </ul>
             </div>
         </div>
@@ -209,7 +210,6 @@
                 Kami menyediakan berbagai layanan laundry dengan kualitas terbaik dan harga terjangkau untuk memenuhi kebutuhan pakaian bersih Anda.
             </p>
             <div class="row">
-                
                 <div class="col-md-4 col-sm-6">
                     <div class="kartu-harga">
                         <h3>Laundry Satuan</h3>
@@ -219,7 +219,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-6">
                     <div class="kartu-harga">
                         <h3>Laundry Kiloan</h3>
@@ -229,7 +228,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-12">
                     <div class="kartu-harga">
                         <h3>Bedding Care</h3>
@@ -239,21 +237,18 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-6">
                     <div class="kartu-harga">
                         <h3>Cuci Saja</h3>
                         <div class="harga-text">Rp 10.000/8Kg</div>
                     </div>
                 </div>
-
                  <div class="col-md-4 col-sm-6">
                     <div class="kartu-harga">
                         <h3>Cuci Kering</h3>
                         <div class="harga-text">Rp 20.000/8Kg</div>
                     </div>
                 </div>
-
                  <div class="col-md-4 col-sm-6">
                     <div class="kartu-harga">
                         <h3>Cuci Kering Lipat</h3>
@@ -393,7 +388,7 @@
             </div>
         </div>
     </footer>
-
+    
     <script src="bootstrap/js/jQuery.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
