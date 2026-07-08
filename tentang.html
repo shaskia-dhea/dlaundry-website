@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tentang Kami - D'Laundry</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #1e3a8a;
+        }
+        .navbar-default {
+            background-color: #0284c7; 
+            border-color: transparent;
+            margin-bottom: 0; 
+        }
+        .navbar-default .navbar-brand {
+            color: #ffffff !important;
+            font-weight: bold;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .navbar-logo {
+            height: 50px; 
+            width: auto;
+            margin-right: 2px;
+        }
+        .navbar-default .navbar-nav > li > a {
+            color: #ffffff !important;
+            font-weight: 500;
+            transition:all 0.3s ease;
+        }
+        .navbar-default .navbar-nav > .active > a, 
+        .navbar-default .navbar-nav > li > a:hover ,
+        .navbar-default .navbar-nav > li > a:focus {
+            color: #ffffff !important;
+            background-color: transparent !important;
+            font-weight: bold;
+            border-bottom: 1px solid #ffffff;
+        }
+         .navbar-default .navbar-toggle {
+            border-color: #ffffff !important;
+        }
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: #ffffff !important;
+        }
+        .navbar-default .navbar-toggle:hover,
+        .navbar-default .navbar-toggle:focus {
+            background-color: rgba(255, 255, 255, 0.2) !important;
+        }
+
+        .jumbotron-tentang {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/background-tentang.jpeg") no-repeat center center;
+            background-size: cover !important; 
+            background-position: center 20% !important; 
+            padding: 235px 0px;
+            margin-top:10px; 
+            text-align: center;
+            width: 100%;
+        }
+        .jumbotron-tentang h1 {
+            font-size: 50px;
+            font-weight: 800;
+            color: #ffffff !important;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+            margin: 0;
+            text-transform: uppercase;
+        }
+        .section-tentang-konten {
+            background-color: #ffffff;
+            padding: 60px 0;
+        }
+        .kotak-persegi-gradasi {
+            background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 100%);
+            border: 1px solid #bae6fd;
+            border-radius: 8px; 
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(2, 132, 199, 0.05);
+            text-align: left; 
+            margin-bottom: 30px;
+        }
+        .sub-judul {
+            color: #0284c7;
+            font-weight: 600;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .nama-brand {
+            color: #024182;
+            font-size: 36px;
+            font-weight: 800;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+        .deskripsi-tentang {
+            font-size: 16px;
+            color: #4b5563;
+            line-height: 1.8;
+            margin: 0;
+            text-align: justify;
+        }
+        .foto-tentang {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .fitur-item {
+            margin-bottom: 35px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .icon-biru-lingkaran {
+            background-color: #0284c7;
+            color: #ffffff;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            line-height: 65px;
+            text-align: center;
+            font-size: 26px;
+            margin-right: 20px;
+            box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+            flex-shrink: 0; 
+        }
+        .fitur-teks h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #024182;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        .fitur-teks p {
+            font-size: 16px;
+            color: #6b7280;
+            line-height: 1.6;
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .jumbotron-tentang { padding: 120px 0; } 
+            .jumbotron-tentang h1 { font-size: 32px; }
+            .nama-brand { font-size: 28px; }
+            .kotak-persegi-gradasi { padding: 25px; }
+            .icon-biru-lingkaran {
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 20px;
+                margin-right: 15px;
+            }
+            .fitur-teks h3 { font-size: 18px; }
+            .row-flex { display: block !important; }
+        }
+        .section-mengapa {
+            background-color: #ffffff;
+            padding: 10px 0 60px 0;
+        }
+        .judul-mengapa {
+            font-size: 38px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-top: 30;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .sub-mengapa {
+            font-size: 16px;
+            color: #555555;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .row-flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .kartu-mengapa {
+            background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 100%);
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 30px 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(2, 132, 199, 0.03);
+            height: calc(100% - 30px);
+        }
+        .kartu-mengapa h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #024182;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .kartu-mengapa p {
+            font-size: 15px;
+            color: #4b5563;
+            line-height: 1.7;
+            text-align: justify;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle Nav</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="Logo" class="navbar-logo"> D'LAUNDRY
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li class="active"><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="layanan.html">Layanan</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron-tentang">
+        <div class="container">
+            <h1>Tentang Kami</h1>
+        </div>
+    </div>
+    
+    <div class="section-tentang-konten">
+        <div class="container">
+           <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="kotak-persegi-gradasi">
+                        <div class="sub-judul">Tentang kami</div>
+                        <h2 class="nama-brand">D'Laundry</h2>
+                        <p class="deskripsi-tentang">
+                            D'Laundry hadir untuk memenuhi kebutuhan laundry yang tidak sekedar bersih, namun memberikan layanan yang lebih kepada para konsumen dari sisi kualitas, kecepatan, dan harga yang bersaing. Dengan peralatan yang canggih, tenaga yang profesional, kami siap menyelesaikan laundry pakaian Anda hanya 8 jam. Nikmati layanan cucian yang bersih maksimal, rapi, dan bergaransi, siap menemani aktivitas padat Anda sehari-hari.
+                        </p>
+                    </div>
+                    <img src="images/foto-laundry.jpeg" alt="Foto Toko D'Laundry" class="foto-tentang">
+                </div>
+
+                <div class="col-md-6 col-sm-12" style="padding-top: 15px;">
+                    
+                    <div class="fitur-item">
+                        <div class="icon-biru-lingkaran">
+                            <span class="glyphicon glyphicon-tags"></span>
+                        </div>
+                        <div class="fitur-teks">
+                            <h3>Kami Professional</h3>
+                            <p>Kami menggunakan mesin cuci and pengering berteknologi terbaik serta ramah lingkungan. Setiap pakaian Anda ditangani dengan detergen premium dan metode khusus untuk memastikan hasil yang jauh lebih bersih, wangi, higienis, dan aman bagi serat kain.</p>
+                        </div>
+                    </div>
+
+                    <div class="fitur-item">
+                        <div class="icon-biru-lingkaran">
+                            <span class="glyphicon glyphicon-heart"></span>
+                        </div>
+                        <div class="fitur-teks">
+                            <h3>Kami Terpercaya</h3>
+                            <p>Kepuasan Anda adalah prioritas utama kami. D'Laundry selalu menjaga konsistensi kualitas di setiap cucian, didukung dengan layanan bergaransi untuk memberikan rasa aman dan kenyamanan penuh bagi setiap pelanggan setia kami.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="fitur-item">
+                        <div class="icon-biru-lingkaran">
+                            <span class="glyphicon glyphicon-hourglass"></span>
+                        </div>
+                        <div class="fitur-teks">
+                            <h3>Kami Tepat Waktu</h3>
+                            <p>Kami memahami betapa berharganya waktu Anda. Dengan manajemen operasional yang efisien and tim yang sigap, kami berkomitmen menyelesaikan cucian Anda tepat waktu sesuai paket pilihan Anda tanpa penundaan.</p>
+                        </div>
+                    </div>
+
+                    <div class="fitur-item">
+                        <div class="icon-biru-lingkaran">
+                            <span class="glyphicon glyphicon-time"></span>
+                        </div>
+                        <div class="fitur-teks">
+                            <h3>Jam Buka</h3>
+                            <p>
+                                <strong>Jumat - Minggu : 08.00 - 20.00 WIB</strong> (Pasti Buka)<br>
+                                <strong>Senin - Kamis : Operasional Fleksibel / Kondisional.</strong><br>
+                                Kami selalu siap melayani Anda di akhir pekan! Untuk hari Senin hingga Kamis, jadwal operasional kami menyesuaikan situasi. Libur berkala hanya dilakukan di hari besar atau hari kerja tertentu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                
+    <div class="section-mengapa">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="judul-mengapa">Mengapa Harus di D'Laundry...?</h2>
+                    <p class="sub-mengapa">Kami tau jika pakaian merupakan kebutuhan primer yang harus terpenuhi</p>
+                </div>
+            </div>
+            <div class="row row-flex">
+                <div class="col-md-4 col-sm-6">
+                    <div class="kartu-mengapa">
+                        <h4>Deterjen Unggulan</h4>
+                        <p>Kami menggunakan detergen yang lebih ramah lingkungan berbahan dasar Methyl Esther Sulfonate (MES) yang berasal dari bahan nabati namun memiliki daya ampuh yang efektif mengangkat kotoran membandel pada pakaian.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="kartu-mengapa">
+                        <h4>Layanan Lengkap</h4>
+                        <p>Berbagai jenis layanan kami sediakan sesuai dengan kebutuhan pelanggan : Regular Ekonomis , Paket Exclusive , Laundry Khusus Pakaian Bayi , Laundry Bed Cover , dan Boneka serta berbagai layanan lainnya.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="kartu-mengapa">
+                        <h4>Garansi 100% Puas</h4>
+                        <p>Kami memberikan jaminan kepuasan kepada para pelanggan dan jika pelanggan tidak merasa puas dengan hasil proses kami, kami akan mengulang proses TANPA BIAYA TAMBAHAN.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="kartu-mengapa">
+                        <h4>Pencucian Higienis & Terpisah</h4>
+                        <p>Kami sangat menjaga kebersihan dan privasi pakaian Anda. Di D'Laundry, setiap nota pakaian pelanggan dicuci menggunakan mesin yang terpisah secara personal, sehingga dijamin tidak akan pernah tercampur atau tertukar dengan milik orang lain.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="kartu-mengapa">
+                        <h4>Selesai Tepat Waktu</h4>
+                        <p>Waktu Anda sangat berharga. Kami berkomitmen memberikan pelayanan yang disiplin dengan jaminan selesai sesuai estimasi waktu. Tersedia juga pilihan layanan ekspres kilat bagi Anda yang membutuhkan pakaian bersih dalam waktu cepat.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="kartu-mengapa">
+                        <h4>Parfum Premium Tahan Lama</h4>
+                        <p>Pakaian Anda tidak hanya bersih, tetapi juga wangi segar sepanjang hari. Kami menggunakan pewangi premium grade-A ramah serat kain yang aromanya mengunci dan bertahan lama, menjaga kesegaran pakaian bahkan saat disimpan lama di lemari.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background-color: #0284c7; color:#ffffff; padding: 40px 0px;">
+        <div class="container">
+            <div class="row">  
+                <div class="col-md-4" style="margin-bottom: 20px;">
+                    <h3 style="font-weight: bold; margin-top: 0px;">D'Laundry</h3>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                        Pakaian bersih maksimal, wangi segar, dan selesai tepat waktu. Solusi praktis untuk hari sibuk Anda.
+                    </p>
+                    <p style="line-height: 1.8; font-size: 14px;">
+                        <a href="index.html" style="color: #ffffff;">Beranda</a><br>
+                        <a href="tentang.html" style="color:#ffffff;">Tentang Kami</a><br>
+                        <a href="layanan.html" style="color: #ffffff;">Layanan</a><br>
+                        <a href="galeri.html" style="color: #ffffff;">Galeri</a><br>
+                        <a href="kontak.html" style="color:#ffffff;">Kontak</a>
+                    </p>
+                </div>
+                <div class="col-md-4" style="margin-bottom: 20px;">
+                    <h4 style="font-weight: bold; margin-top: 0px;">Info Kontak & Jam Buka</h4>
+                    <p style="font-size: 14px;"><span class="glyphicon glyphicon-time"></span> Senin - Minggu: 08.00 - 20.00 WIB</p>
+                    <p style="font-size: 14px;"><span class="glyphicon glyphicon-earphone"></span> <a href="https://wa.me/6283839420964" target="_blank" style="color: #ffffff;">0838-3942-0964</a></p>
+                    <p style="font-size: 14px;"><span class="glyphicon glyphicon-envelope"></span> dlaundry@gmail.com</p>
+                </div>
+                <div class="col-md-4" style="margin-bottom: 20px;">
+                    <h4 style="font-weight: bold; margin-top: 0px;">Info Lokasi</h4>
+                    <p style="font-size: 14px; margin-bottom: 15px;">
+                        Jln. Sei Batang Hari No.96 , Babura , Medan Sunggal
+                    </p>
+                    <div style="position: relative; width: 100%; height: 160px; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.010644239345!2d98.64364710918264!3d3.5850301503063906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312e32322cf2e5%3A0xca6a6096812ec878!2sJl.%20Sei%20Batang%20Hari%20No.96%2C%20Babura%20Sunggal%2C%20Kec.%20Medan%20Sunggal%2C%20Kota%20Medan%2C%20Sumatera%20Utara%2020121!5e0!3m2!1sid!2sid!4v1783255406427!5m2!1sid!2sid" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; position: absolute; top: 0; left: 0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-top: 1px solid #5b9bd5;">
+            <div class="row">
+                <div class="col-md-12 text-center" style="font-size: 12px;">
+                    <p>&copy; 2026 D'Laundry. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="bootstrap/js/jQuery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

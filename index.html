@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perancangan Website D'Laundry</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #ffffff;
+        }
+        .navbar-default {
+            background-color: #0284c7; 
+            border-color: transparent;
+            margin-bottom: 0; 
+        }
+        .navbar-default .navbar-brand {
+            color: #ffffff !important;
+            font-weight: bold;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .navbar-logo {
+            height: 50px; 
+            width: auto;
+            margin-right: 2px;
+        }
+        .navbar-default .navbar-nav > li > a {
+            color: #ffffff !important;
+            font-weight: 500;
+            transition:all 0.3s ease;
+        }
+        .navbar-default .navbar-nav > .active > a, 
+        .navbar-default .navbar-nav > li > a:hover ,
+        .navbar-default .navbar-nav > li > a:focus {
+            color: #ffffff !important;
+            background-color: transparent !important;
+            font-weight: bold;
+            border-bottom: 1px solid #ffffff;
+        }
+         .navbar-default .navbar-toggle {
+            border-color: #ffffff !important;
+        }
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: #ffffff !important;
+        }
+        .navbar-default .navbar-toggle:hover,
+        .navbar-default .navbar-toggle:focus {
+            background-color: rgba(255, 255, 255, 0.2) !important;
+        }
+        
+        .jumbotron-laundry {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/background-laundry.jpeg') no-repeat center center;
+            background-size: cover; 
+            padding: 120px 0px; 
+            text-align: center;
+            width: 100%;
+            margin-top: 40px; 
+        }
+        .jumbotron-laundry h1 {
+            font-size: 55px;
+            font-weight: 800;
+            color: #ffffff !important;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        .jumbotron-laundry h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff !important; 
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+        }
+        .jumbotron-laundry p {
+            font-size: 15px;
+            font-weight: 400;
+            color: #ffffff !important;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+            padding: 0 15px;
+        }
+        
+        .section-beranda-tentang {
+            padding: 50px 0px;
+            background-color: #f4f9fd;
+        }
+        .beranda-tentang-judul {
+            color: #024182; 
+            font-size: 44px;
+            font-weight: 800;
+            margin-top: 0px;
+        }
+        .img-tentang-beranda {
+            width: 100%;
+            height: auto;
+            border-radius: 4px; 
+        }
+
+        .section-layanan {
+            background-color: #ffffff; 
+            padding: 30px 0px; 
+            text-align: center;
+        }
+        .judul-layanan {
+            background-color: #ffffff; 
+            color: #0284c7;
+            font-weight: bold;
+            padding: 10px 30px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .kartu-layanan {
+            background: linear-gradient(135deg, #0284c7 0%, #b3e5fc 100%);
+            color: #1e3a8a;
+            padding: 40px 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 15px rgba(2, 132, 199, 0.15);
+        }
+        .icon-lingkaran {
+            background-color: rgba(255, 255, 255, 0.25);
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            line-height: 55px;
+            margin: 0 auto 15px auto;
+            font-size: 22px;
+        }
+        .section-layanan {
+            background-color: #ffffff; 
+            padding: 20px 0;
+            text-align: center;
+        }
+        .kartu-harga {
+            background: linear-gradient(135deg, #0284c7 0%, #b3e5fc 100%);
+            border-radius: 20px;
+            padding: 45px 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(2, 132, 199, 0.15);
+            transition: transform 0.3s ease;
+            color: #ffffff;
+        }
+        .kartu-harga:hover {
+            transform: translateY(-8px);
+        }
+        .kartu-harga h3 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        .kartu-harga .harga-text {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 35px;
+            color: #024182;
+            background: rgba(255, 255, 255, 0.8);
+            display: inline-block;
+            padding: 6px 22px;
+            border-radius: 20px;
+        }
+        .kartu-harga .btn-detail-layanan {
+            background-color: #024182;
+            color: #ffffff !important;
+            font-weight: bold;
+            padding: 11px 30px;
+            border-radius: 25px;
+            border: none;
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 13px;
+            transition: background 0.2s;
+        }
+        .kartu-harga .btn-detail-layanan:hover {
+            background-color: #1e3a8a;
+            text-decoration: none;
+        }
+        .modal-header {
+            background-color: #0284c7;
+            color: white;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .modal-title {
+            font-weight: bold;
+        }
+        .modal-body {
+            padding: 25px;
+            max-height: 420px;  
+            overflow-y: auto; 
+        }
+        .baris-layanan {
+            background-color: #0284c7;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+        }
+        .close-putih {
+            color: #ffffff !important;
+            opacity: 0.8;
+        }
+        .section-cta-pickup {
+            padding: 40px 0px;
+            background-color: #ffffff;
+        }
+        .ikon-truk-pickup {
+            font-size: 50px;
+            color: #337ab7;
+        }
+        .marquee-pembungkus {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            border-left: 5px solid #337ab7;
+            margin-top: 15px;
+        }
+        .section-galeri {
+            background-color: #ffffff; 
+            padding: 20px 0; 
+            text-align: center;
+        }
+        .kartu-galeri {
+            background: #ffffff;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(2, 132, 199, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 10px; 
+            border: 1px solid #e0f2fe;
+        }
+        .kartu-galeri:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(2, 132, 199, 0.2);
+        }
+        .foto-galeri {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .jumbotron-laundry {
+                padding: 40px 0px 45px 0px !important; 
+                margin-top: 50px;
+                text-align: center; 
+            }
+            .jumbotron-laundry h1 {
+                font-size: 32px !important;
+                margin-top: 0px !important;
+                margin-bottom: 5px;
+                text-align: center; 
+            }
+            .jumbotron-laundry h2 {
+                font-size: 14px !important;
+                margin-bottom: 10px;
+            }
+            .jumbotron-laundry p {
+                font-size: 11px !important; 
+                line-height: 1.4;
+                padding: 0 20px;
+                margin-bottom: 15px;
+            }
+            .jumbotron-laundry div {
+                margin-top: 0px !important;
+            }
+            .jumbotron-laundry .btn {
+                padding: 6px 20px !important;
+                font-size: 13px;
+            }
+            .beranda-tentang-judul {
+                font-size: 32px;
+                text-align: center;
+            }
+            .section-beranda-tentang h4 {
+                text-align: center;
+            }
+            .img-tentang-beranda {
+                margin-bottom: 25px;
+            }
+            .section-beranda-tentang .row {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-laundry" aria-expanded="false">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="Logo" class="navbar-logo"> D'LAUNDRY
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="menu-laundry">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="layanan.html">Layanan</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron-laundry">
+        <div class="container">
+            <h1>D'Laundry</h1>
+            <h2>Premium Dry Clean, Satuan & Kiloan</h2>
+            <p>
+                Serahkan urusan cucian Anda pada kami! Nikmati layanan laundry cepat, bersih, & terpercaya.<br>
+                <span style="color: #6bf1ff; font-weight: bold;">Yuk, mampir ke outlet kami dan nikmati sensasi laundry kilat dengan hasil bersih higienis!!</span>
+            </p>
+            <div style="margin-top: 25px;">
+                <a href="https://wa.me/6283839420964" target="_blank"><span class="btn btn-success" style="padding: 10px 30px; border-radius: 20px; font-weight: 600;">Hubungi Kami</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-layanan">
+        <div class="container">
+             <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="kartu-layanan">
+                        <div class="icon-lingkaran">
+                            <span class="glyphicon glyphicon-time"></span>
+                        </div>
+                        <h4 style="font-weight: 700;">3 Jam Selesai</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="kartu-layanan">
+                        <div class="icon-lingkaran">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </div>
+                        <h4 style="font-weight: 700;">1 Kostumer 1 Mesin Cuci</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="kartu-layanan">
+                        <div class="icon-lingkaran">
+                            <span class="glyphicon glyphicon-ok-sign"></span>
+                        </div>
+                        <h4 style="font-weight: 700;">Bergaransi</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-beranda-tentang">
+        <div class="container">
+            <div class="row" style="display: flex; align-items: center; flex-wrap: wrap;">
+                <div class="col-md-6">
+                    <img src="images/foto-laundry.jpeg" alt="Outlet D'Laundry" class="img-tentang-beranda">
+                </div>
+                <div class="col-md-6">
+                    <h4 style="color: #0284c7; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Tentang Kami</h4>
+                    <h2 class="beranda-tentang-judul">D'Laundry</h2>
+                    <p style="color: #4b5563; line-height: 1.8; text-align: justify; font-size: 16px;">
+                        D'Laundry hadir untuk memenuhi kebutuhan laundry yang tidak sekedar bersih, namun memberikan layanan yang lebih kepada para konsumen dari sisi kualitas, kecepatan, and harga yang bersaing. Dengan peralatan yang canggih, tenaga yang profesional, kami siap menyelesaikan laundry pakaian Anda hanya dalam waktu singkat demi kenyamanan aktivitas harian Anda.
+                    </p>
+                    <br>
+                    <a href="tentang.html" class="btn btn-primary" style="padding: 10px 30px; border-radius: 20px; font-weight: 600;  margin-bottom: 50px;">Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-layanan">
+        <h2 class="text-center" style="margin-bottom: 30px; font-weight: bold; color: #1e3a8a;">Layanan</h2>        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="kartu-harga">
+                        <h3>Laundry Satuan</h3>
+                        <div class="harga-text">Mulai dari Rp 25.000</div>
+                        <div>
+                            <button class="btn-detail-layanan" data-toggle="modal" data-target="#modalSatuan">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="kartu-harga">
+                        <h3>Laundry Kiloan</h3>
+                        <div class="harga-text">Mulai dari Rp 10.000</div>
+                        <div>
+                            <button class="btn-detail-layanan" data-toggle="modal" data-target="#modalKiloan">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                    <div class="kartu-harga">
+                        <h3>Bedding Care</h3>
+                        <div class="harga-text">Mulai dari Rp 40.000</div>
+                        <div>
+                            <button class="btn-detail-layanan" data-toggle="modal" data-target="#modalBadding">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center" style="margin-top: 20px;">
+                <div class="col-md-12">
+                    <a href="layanan.html" class="btn btn-success btn-lg" style="padding: 10px 30px;  margin-bottom: 50px;">Selengkapnya</a>
+                </div>
+           </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modalSatuan" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close close-putih" data-dismiss="modal">×</button>
+                    <h4 class="modal-title text-center">Pilihan Layanan - Laundry Satuan</h4>
+                </div>
+                <div class="modal-body" style="padding: 25px;">
+                    <div class="baris-layanan"><span>Boneka</span> <span>Rp. 25.000</span></div>
+                    <div class="baris-layanan"><span>Topi</span> <span>Rp. 15.000</span></div>
+                    <div class="baris-layanan"><span>Blazer</span> <span>Rp. 15.000</span></div>
+                    <div class="baris-layanan"><span>Handuk</span> <span>Rp. 10.000</span></div>
+                    <div class="baris-layanan"><span>Tas</span> <span>Rp. 30.000</span></div>
+                    <div class="baris-layanan"><span>Kebaya</span> <span>Rp. 20.000</span></div>
+                    <div class="baris-layanan"><span>Jaket</span> <span>Rp. 20.000</span></div>
+                    <div class="baris-layanan"><span>Kemeja</span> <span>Rp. 10.000</span></div>
+                    <div class="baris-layanan"><span>Selimut Tebal</span> <span>Rp. 15.000</span></div>
+                    <div class="baris-layanan"><span>Dasi</span> <span>Rp. 8.000</span></div>
+                    <div class="baris-layanan"><span>Jas </span> <span>Rp. 15.000</span></div>
+                    <div class="baris-layanan"><span>Ulos</span> <span>Rp. 15.000</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalKiloan" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close close-putih" data-dismiss="modal">×</button>
+                    <h4 class="modal-title text-center">Pilihan Layanan - Laundry Kiloan</h4>
+                </div>
+                <div class="modal-body" style="padding: 25px;">
+                    <div class="baris-layanan"><span>Setrika Saja</span> <span>Rp. 4.000/Kg</span></div>
+                    <div class="baris-layanan"><span>Cuci Lipat Rapi</span> <span>Rp. 5.000/Kg</span></div>
+                    <div class="baris-layanan"><span>Cuci Setrika Rapi</span> <span>Rp. 6.000/Kg</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalBadding" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                   <button type="button" class="close close-putih" data-dismiss="modal">×</button>
+                    <h4 class="modal-title text-center">Pilihan Layanan - Badding Care</h4>
+                </div>
+                <div class="modal-body" style="padding: 25px;">
+                    <div class="baris-layanan"><span>Bantal/Guling</span> <span>Rp. 15.000/Pcs</span></div>
+                    <div class="baris-layanan"><span>Bedcover Sedang</span> <span>Rp. 25.000/Pcs</span></div>
+                    <div class="baris-layanan"><span>Bedcover Besar</span> <span>Rp. 30.000/Pcs</span></div>
+                    <div class="baris-layanan"><span>Bedcover Jumbo</span> <span>Rp. 35.000/Pcs</span></div>
+                    <div class="baris-layanan"><span>Sarung Bantal/Guling</span> <span>Rp. 6.000/Pcs</span></div>
+                    <div class="baris-layanan"><span>Sarung</span> <span>Rp. 10.000/Pcs</span></div>
+                    <div class="baris-layanan"><span>Selimut Tipis</span> <span>Rp. 10.000/Pcs</span></div>
+                    <div class="baris-layanan"><span>Selimut Tebal</span> <span>Rp. 15.000/Pcs</span></div>
+                    <div class="baris-layanan"><span>Keset/Alas Kaki</span> <span>Rp. 8.000/Pcs</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="well" style="background-color: #e0f2fe; border: none;">
+            <div class="row">
+                <div class="col-md-1 text-center">
+                    <span class="glyphicon glyphicon-truck" style="font-size: 50px; color: #0284c7;"></span>
+                </div>
+                <div class="col-md-8">
+                    <h3 style="margin-top: 0px; color: #0369a1; font-weight: bold;">Apakah kamu punya masalah dengan laundryan kamu?</h3>
+                    <h4 style="color: #0c4a6e;">With D'Laundry kamu lebih percaya !!!</h4>
+                    <marquee style="color: #0284c7; font-weight: bold;">Yuk, mampir ke outlet kami dan nikmati sensasi laundry kilat dengan hasil bersih higienis serta bergaransi!</marquee>
+                </div>
+                <div class="col-md-3 text-center" style="margin-top: 15px;">
+                    <a href="kontak.html" class="btn btn-primary btn-lg btn-block" style="background-color: #0284c7; color: #ffffff; font-weight: bold; border: none;">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-galeri">
+        <h2 class="text-center" style="margin-bottom: 30px; font-weight: bold; color: #1e3a8a;">Galeri</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="kartu-galeri">
+                        <img src="images/galeri1.jpg" alt="Galeri Foto 1" class="foto-galeri">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="kartu-galeri">
+                        <img src="images/galeri6.jpeg" alt="Galeri Foto 6" class="foto-galeri">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="kartu-galeri">
+                        <img src="images/galeri3.jpg" alt="Galeri Foto 3" class="foto-galeri">
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center" style="margin-top: 20px;">
+                <div class="col-md-12">
+                   <a href="galeri.html" class="btn btn-success btn-lg" style="padding: 10px 30px; margin-bottom: 50px;">Selengkapnya</a>
+                </div>
+           </div>
+        </div>
+    </div>
+
+    <footer style="background-color: #0284c7; color:#ffffff; padding: 40px 0px;">
+        <div class="container">
+            <div class="row">  
+                <div class="col-md-4" style="margin-bottom: 20px;">
+                    <h3 style="font-weight: bold; margin-top: 0px;">D'Laundry</h3>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                        Pakaian bersih maksimal, wangi segar, dan selesai tepat waktu. Solusi praktis untuk hari sibuk Anda.
+                    </p>
+                    <p style="line-height: 1.8; font-size: 14px;">
+                        <a href="index.html" style="color: #ffffff;">Beranda</a><br>
+                        <a href="tentang.html" style="color:#ffffff;">Tentang Kami</a><br>
+                        <a href="layanan.html" style="color: #ffffff;">Layanan</a><br>
+                        <a href="galeri.html" style="color: #ffffff;">Galeri</a><br>
+                        <a href="kontak.html" style="color:#ffffff;">Kontak</a>
+                    </p>
+                </div>
+                <div class="col-md-4" style="margin-bottom: 20px;">
+                    <h4 style="font-weight: bold; margin-top: 0px;">Info Kontak & Jam Buka</h4>
+                    <p style="font-size: 14px;"><span class="glyphicon glyphicon-time"></span> Senin - Minggu: 08.00 - 20.00 WIB</p>
+                    <p style="font-size: 14px;"><span class="glyphicon glyphicon-earphone"></span> <a href="https://wa.me/6283839420964" target="_blank" style="color: #ffffff;">0838-3942-0964</a></p>
+                    <p style="font-size: 14px;"><span class="glyphicon glyphicon-envelope"></span> dlaundry@gmail.com</p>
+                </div>
+                <div class="col-md-4" style="margin-bottom: 20px;">
+                    <h4 style="font-weight: bold; margin-top: 0px;">Info Lokasi</h4>
+                    <p style="font-size: 14px; margin-bottom: 15px;">
+                        Jln. Sei Batang Hari No.96 , Babura , Medan Sunggal
+                    </p>
+                    <div style="position: relative; width: 100%; height: 160px; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.010644239345!2d98.64364710918264!3d3.5850301503063906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312e32322cf2e5%3A0xca6a6096812ec878!2sJl.%20Sei%20Batang%20Hari%20No.96%2C%20Babura%20Sunggal%2C%20Kec.%20Medan%20Sunggal%2C%20Kota%20Medan%2C%20Sumatera%20Utara%2020121!5e0!3m2!1sid!2sid!4v1783255406427!5m2!1sid!2sid" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; position: absolute; top: 0; left: 0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-top: 1px solid #5b9bd5;">
+            <div class="row">
+                <div class="col-md-12 text-center" style="font-size: 12px;">
+                    <p>&copy; 2026 D'Laundry. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="bootstrap/js/jQuery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
