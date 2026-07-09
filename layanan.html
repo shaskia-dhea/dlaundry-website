@@ -77,11 +77,10 @@
             text-align: center;
         }
         .teks-pengantar-standar {
-            color: #0284c7;
-            font-size: 1.2vw;
-            margin: 0 auto 40px auto; 
-            line-height: 1.6;
-            max-width: 800px;
+        font-size: 16px;
+        color: #555555;
+        margin-bottom: 40px;
+        text-align: center;
         }
         .kartu-harga {
             background: linear-gradient(135deg, #0284c7 0%, #b3e5fc 100%);
@@ -157,19 +156,26 @@
             color: #ffffff !important;
             opacity: 0.8;
         }
-        @media (max-width: 992px) {
-            .teks-pengantar-standar { font-size: 16px; }
+        @media (max-width: 768px) {
+            .teks-pengantar-standar {  font-size: 14px !important; margin-bottom: 25px !important; }
             .kartu-harga h3 { font-size: 24px; }
             .kartu-harga .harga-text { font-size: 16px; }
-        }
-        @media (max-width: 768px) {
            .jumbotron-layanan-utama { padding: 120px 0; } 
             .jumbotron-layanan-utama h1 { font-size: 36px !important; font-weight: 800 !important; }
             .kartu-harga { padding: 30px 15px; }
             .kartu-harga h3 { font-size: 22px !important; font-weight: 700 !important; }
             .kartu-harga .harga-text { font-size: 15px !important; }
             .modal-body { max-height: 320px; } 
+            .well h3 {
+                font-size: 18px !important;
+                text-align: center;
+            }
+            .well h4 {
+                font-size: 15px !important;
+                text-align: center;
+            }
         }
+        
     </style>
 </head>
 <body>
@@ -207,7 +213,7 @@
     <div class="section-layanan" id="menu-layanan">    
         <div class="container">
              <p class="teks-pengantar-standar">
-                Kami menyediakan berbagai layanan laundry dengan kualitas terbaik dan harga terjangkau untuk memenuhi kebutuhan pakaian bersih Anda.
+               <b> Kami menyediakan berbagai layanan laundry dengan kualitas terbaik dan harga terjangkau untuk memenuhi kebutuhan pakaian bersih Anda </b>
             </p>
             <div class="row">
                 <div class="col-md-4 col-sm-6">
