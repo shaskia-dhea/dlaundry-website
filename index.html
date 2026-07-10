@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Perancangan Website D'Laundry</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             background-color: #ffffff;
-            font-size: 16px;
         }
         .navbar-default {
             background-color: #0284c7; 
@@ -33,7 +33,7 @@
         .navbar-default .navbar-nav > li > a {
             color: #ffffff !important;
             font-weight: 500;
-            transition:all 0.3s ease;
+            transition: all 0.3s ease;
         }
         .navbar-default .navbar-nav > .active > a, 
         .navbar-default .navbar-nav > li > a:hover ,
@@ -43,7 +43,7 @@
             font-weight: bold;
             border-bottom: 1px solid #ffffff;
         }
-         .navbar-default .navbar-toggle {
+        .navbar-default .navbar-toggle {
             border-color: #ffffff !important;
         }
         .navbar-default .navbar-toggle .icon-bar {
@@ -53,7 +53,7 @@
         .navbar-default .navbar-toggle:focus {
             background-color: rgba(255, 255, 255, 0.2) !important;
         }
-        .jumbotron-laundry {
+         .jumbotron-laundry {
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/background-laundry.jpeg') no-repeat center center;
             background-size: cover; 
             padding: 120px 0px; 
@@ -267,7 +267,14 @@
             margin-bottom: 15px;
         }
         @media (max-width: 768px) {
-            body {
+            .navbar-default .navbar-nav > li > a {
+                padding-top: 10px !important;
+                padding-bottom: 10px !important;
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+                font-size: 13px !important;
+            }
+             body {
                 font-size: 14px;
             }
             .jumbotron-laundry {
@@ -359,6 +366,7 @@
     </style>
 </head>
 <body>
+
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -372,6 +380,7 @@
                     <img src="images/logo.png" alt="Logo" class="navbar-logo"> D'LAUNDRY
                 </a>
             </div>
+
             <div class="collapse navbar-collapse" id="menu-laundry">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="index.html">Beranda</a></li>
@@ -436,37 +445,13 @@
                     <img src="images/foto-laundry.jpeg" alt="Outlet D'Laundry" class="img-tentang-beranda">
                 </div>
                 <div class="col-md-6">
-                    <h4 style="color: #0284c7; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px;">Tentang Kami</h4>
+                    <h4 style="color: #0284c7; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Tentang Kami</h4>
                     <h2 class="beranda-tentang-judul">D'Laundry</h2>
-                    
-                    <p style="color: #4b5563; line-height: 1.8; text-align: justify; font-size: 15px; margin-bottom: 25px;">
-                        <span style="font-weight: bold; color: #024182;">D'Laundry</span> hadir untuk memenuhi kebutuhan laundry yang tidak sekedar bersih, namun memberikan layanan yang lebih kepada para konsumen. Dengan peralatan yang canggih serta tenaga yang profesional, kami siap menyelesaikan laundry pakaian Anda hanya dalam waktu singkat demi kenyamanan aktivitas harian Anda.
+                    <p style="color: #4b5563; line-height: 1.8; text-align: justify; font-size: 16px;">
+                        D'Laundry hadir untuk memenuhi kebutuhan laundry yang tidak sekedar bersih, namun memberikan layanan yang lebih kepada para konsumen dari sisi kualitas, kecepatan, and harga yang bersaing. Dengan peralatan yang canggih, tenaga yang profesional, kami siap menyelesaikan laundry pakaian Anda hanya dalam waktu singkat demi kenyamanan aktivitas harian Anda.
                     </p>
-                    
-                    <div class="row">
-                        <div class="col-xs-4 text-center">
-                            <div class="fitur-mini-box">
-                                <span class="glyphicon glyphicon-star" style="font-size: 20px; color: #0284c7; display: block; margin-bottom: 5px;"></span>
-                                <span style="font-weight: bold; color: #1e3a8a; font-size: 11px; text-transform: uppercase;">Kualitas</span>
-                            </div>
-                        </div>
-                        <div class="col-xs-4 text-center">
-                            <div class="fitur-mini-box">
-                                <span class="glyphicon glyphicon-flash" style="font-size: 20px; color: #0284c7; display: block; margin-bottom: 5px;"></span>
-                                <span style="font-weight: bold; color: #1e3a8a; font-size: 11px; text-transform: uppercase;">Kecepatan</span>
-                            </div>
-                        </div>
-                        <div class="col-xs-4 text-center">
-                            <div class="fitur-mini-box">
-                                <span class="glyphicon glyphicon-tags" style="font-size: 20px; color: #0284c7; display: block; margin-bottom: 5px;"></span>
-                                <span style="font-weight: bold; color: #1e3a8a; font-size: 11px; text-transform: uppercase;">Harga OK</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div style="margin-top: 15px;" class="text-left">
-                        <a href="tentang.html" class="btn btn-primary" style="padding: 10px 30px; border-radius: 20px; font-weight: 600; margin-bottom: 30px;">Selengkapnya</a>
-                    </div>
+                    <br>
+                    <a href="tentang.html" class="btn btn-primary" style="padding: 10px 30px; border-radius: 20px; font-weight: 600;  margin-bottom: 50px;">Selengkapnya</a>
                 </div>
             </div>
         </div>
@@ -485,6 +470,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-4 col-sm-6">
                     <div class="kartu-harga">
                         <h3>Laundry Kiloan</h3>
@@ -494,6 +480,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-4 col-sm-12">
                     <div class="kartu-harga">
                         <h3>Bedding Care</h3>
@@ -669,7 +656,7 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="bootstrap/js/jQuery.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
